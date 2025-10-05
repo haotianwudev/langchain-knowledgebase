@@ -18,7 +18,9 @@ NotebookLM supports a wide array of source formats, making it a versatile hub fo
 
 This architecture has significant implications for how a user should approach building a notebook for video generation. The underlying AI model does not ingest the entirety of all 50 sources into its active memory at once. Instead, it employs a Retrieval-Augmented Generation (RAG) system, which scans the documents and pulls only the most relevant passages based on the task at hand. If a notebook contains dozens of documents on disparate topics, the AI's ability to find and synthesize the crucial connections for a specific video is diminished. It may miss key information or fail to construct a comprehensive narrative. Therefore, the most effective strategy is to create smaller, highly focused notebooks, each dedicated to a single project, topic, or theme. This pre-curation of information ensures that the "relevant passages" the AI retrieves are more likely to be the correct and most important ones for building a high-quality video overview.
 
-For optimal results, sources should be actively prepared before uploading. This transforms the passive act of uploading into a strategic step of content curation.| Source Type | Optimization Tips | AI's Focus and Behavior |
+For optimal results, sources should be actively prepared before uploading. This transforms the passive act of uploading into a strategic step of content curation.
+
+| Source Type | Optimization Tips | AI's Focus and Behavior |
 |-------------|-------------------|-------------------------|
 | PDF | Ensure text is selectable and not a scanned image. Check for clean formatting without excessive headers/footers. | Extracts text, images, diagrams, and tables. Cannot process text from image-based PDFs. |
 | Google Docs | Use a clear hierarchical structure with headings (H1, H2, H3) and bulleted/numbered lists. | Understands document structure, using headings to infer topics and logical flow. |
@@ -72,7 +74,9 @@ The customization interface is accessible by clicking the three-dot menu next to
 
 - **Language**: Video Overviews can be generated in over 80 languages, making it a powerful tool for creating multilingual content. This can be set in the customization prompt or in the notebook's general settings.
 
-The following table provides a lexicon of effective prompt templates that can be adapted for various customization goals.| Goal | Prompt Template | Example | Expected Outcome |
+The following table provides a lexicon of effective prompt templates that can be adapted for various customization goals.
+
+| Goal | Prompt Template | Example | Expected Outcome |
 |------|-----------------|---------|------------------|
 | Define Audience | Create this video for an audience of [job title] who are [level of expertise] in [field X] but are beginners in... | Create this video for an audience of project managers who are experts in agile methodology but are beginners in supply chain logistics. | The video will use agile terminology confidently but explain supply chain concepts in simple, foundational terms. |
 | Set the Tone | Generate the video with a [adjective] and [adjective] tone. The narration should sound like a [persona]. | Generate the video with an engaging and optimistic tone. The narration should sound like a tech evangelist presenting a new product. | The language will be positive and forward-looking, and the narration will have an energetic and persuasive cadence. |
@@ -182,7 +186,9 @@ The feature's design makes it particularly well-suited for a range of profession
 
 ### NotebookLM in the AI Video Ecosystem
 
-It is critical to categorize NotebookLM's video feature correctly to avoid misguided expectations. It is a Knowledge Synthesis and AI Presentation tool, not a "Generative Video" tool in the same class as models designed for creative, text-to-video generation. Its core function is to summarize and present existing information, whereas tools like Runway, Sora, or HeyGen are designed to create new, original visual content from a text prompt.| Tool Category | Primary Function | Source Grounding | Output Style | Ideal Use Case |
+It is critical to categorize NotebookLM's video feature correctly to avoid misguided expectations. It is a Knowledge Synthesis and AI Presentation tool, not a "Generative Video" tool in the same class as models designed for creative, text-to-video generation. Its core function is to summarize and present existing information, whereas tools like Runway, Sora, or HeyGen are designed to create new, original visual content from a text prompt.
+
+| Tool Category | Primary Function | Source Grounding | Output Style | Ideal Use Case |
 |---------------|------------------|------------------|--------------|----------------|
 | NotebookLM | Synthesize and present information from user-provided sources. | High: Exclusively uses the user's uploaded documents, ensuring factual grounding in a trusted knowledge base. | Narrated slideshow with extracted and AI-generated visuals. | Summarizing a 50-page research paper into a 10-minute video explainer for a study group. |
 | Runway / Sora | Generate novel, cinematic video clips from a descriptive text prompt. | Low: Creates original content based on the prompt and its internal training data, not grounded in specific user documents. | Full-motion, often photorealistic or stylized video clips. | Creating a short, visually stunning b-roll clip of a "futuristic cityscape at sunset" for a film project. |
